@@ -1,3 +1,5 @@
 # Archivos de IPython Notebooks
 .ipynb_checkpoints/*
 
+# Locks de LibreOffice
+.~lock*
