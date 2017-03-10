@@ -3,3 +3,6 @@
 
 # Locks de LibreOffice
 .~lock*
+
+# Python compilado
+*.pyc
