@@ -1,0 +1,75 @@
+- Energías Primarias:
+  - Energía Hidráulica
+  - Energía Nuclear
+  - Gas Natural de Pozo
+  - Petróleo
+  - Otras Fuentes Primarias de Energía:
+    - Energía Eólica
+    - Energía Solar
+    - Carbón Mineral
+    - Aceites y Alcoholes Vegetales:
+      - Alcohol Vegetal
+      - Aceites Vegetales
+    - Leña, Bagazo y Otros:
+      - Leña
+      - Bagazo
+      - Otros Primarios
+- Energías Secundarias:
+  - Energía Eléctrica
+  - Gas Distribuido por Redes
+  - Gas Licuado
+  - Derivados del Petróleo:
+    - Gas Oil
+    - Fuel Oil
+    - Motonaftas
+  - Biocombustibles:
+    - Biodiesel
+    - Bioetanol
+  - Otras Fuentes Secundarias de Energía:
+    - Gas de Alto Horno
+    - No Energético de Carbón
+    - Carbón Vegetal
+    - Energías Secundarias del Petróleo:
+      - Carbón Residual
+      - Coque de Petróleo
+      - Gas de Refinería
+      - Kerosene
+      - No Energético
+      - Otras Naftas
+    - Energías Secundarias del Carbón:
+      - Coque de Carbón
+      - Gas de Coquería
+    - Energías Secundarias del Gas:
+      - Etano
+      - Gasolina
+- Oferta:
+  - Producción
+  - Importación
+  - Variación de Stock
+  - Exportación
+  - Búnker
+  - No Aprovechado
+  - Pérdidas
+  - Ajustes
+
+- Centros de Transformación:
+  - Centrales Eléctricas:
+    - Servicio Público
+    - Autoproducción
+  - Plantas de Tratamiento de Gas
+  - Refinerías
+  - Otros Centros de Transformación:
+    - Aceiteras y Destilerías
+    - Coquerías
+    - Altos Hornos
+
+- Consumo:
+  - Consumo Propio
+  - Consumo Final:
+    - Residencial
+    - No Energético
+    - Carboneras
+    - Transporte
+    - Comercial
+    - Industria
+    - Agropecuario
