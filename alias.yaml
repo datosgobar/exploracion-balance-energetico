@@ -1,0 +1,69 @@
+# Formas de Energía
+
+## Energías Primarias
+ACEITES VEGETALES: Aceites Vegetales
+ALCOHOL VEGETAL: Alcohol Vegetal
+BAGAZO: Bagazo
+CARBON MINERAL: Carbón Mineral
+EOLICA: Energía Eólica
+GAS DE POZO: Gas Natural de Pozo
+LEÑA: Leña
+NUCLEAR: Energía Nuclear
+OTROS PRIMARIOS: Otros Primarios
+PETROLEO: Petróleo
+SOLAR: Energía Solar
+HIDRAULICA: Energía Hidráulica
+
+## Energías Secundarias
+BIODIESEL: Biodiesel
+BIOETANOL: Bioetanol
+CARBON RESIDUAL: Carbón Residual
+CARBON VEGETAL: Carbón Vegetal # AKA: Carbón de Leña
+COQUE DE CARBON: Coque de Carbón # Coque
+COQUE PETROLEO: Coque de Petróleo # Coque
+ELECTRICIDAD: Energía Eléctrica
+ETANO: Etano # ???
+FUELOIL: Fuel Oil
+GAS ALTO HORNO: Gas de Alto Horno
+GAS COQUERIA: Gas de Coquería
+GAS DE REFINERIA: Gas de Refinería
+GAS DISTRIBUIDO: Gas Distribuido por Redes
+GAS LICUADO: Gas Licuado
+GASOIL: Gas Oil
+GASOLINA ESTABILIZADA PETROLEO y GAS: Gasolina
+KEROSENE: Kerosene
+MOTONAFTAS: Motonaftas
+NE CARBON: No Energético de Carbón
+NO ENERGETICO: No Energético
+OTRAS NAFTAS: Otras Naftas
+
+# Usos
+
+## Oferta
+PROD: Producción
+IMPO: Importación
+V.STK.: Variación de Stock
+EXPO: Exportación
+BUNK: Búnker
+NO AP: No Aprovechado
+PERD: Pérdidas
+AJUSTE: Ajustes
+
+## Centros de Transformación
+CENT: Servicio Público
+AUTO: Autoproducción
+P.TRA.: Plantas de Tratamiento de Gas
+REFI: Refinerías
+ACEI: Aceiteras y Destilerías
+COQ: Coquerías
+CARB: Carboneras
+A.HOR: Altos Hornos
+
+## Consumo
+C.PROP: Consumo Propio
+NO ENER: No Energético
+RESID: Residencial
+COMER: Comercial
+TRANS: Transporte
+AGROP: Agropecuario
+INDUS: Industria
