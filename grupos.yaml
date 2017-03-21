@@ -14,6 +14,7 @@
       - Leña
       - Bagazo
       - Otros Primarios
+
 - Energías Secundarias:
   - Energía Eléctrica
   - Gas Distribuido por Redes
@@ -42,15 +43,17 @@
     - Energías Secundarias del Gas:
       - Etano
       - Gasolina
+
 - Oferta:
   - Producción
   - Importación
-  - Variación de Stock
   - Exportación
-  - Búnker
-  - No Aprovechado
   - Pérdidas
-  - Ajustes
+  - Otros Conceptos de Oferta:
+    - Variación de Stock
+    - Búnker
+    - No Aprovechado
+    - Ajustes
 
 - Centros de Transformación:
   - Centrales Eléctricas:
@@ -61,14 +64,14 @@
   - Otros Centros de Transformación:
     - Aceiteras y Destilerías
     - Coquerías
+    - Carboneras
     - Altos Hornos
 
 - Consumo:
   - Consumo Propio
   - Consumo Final:
     - Residencial
-    - No Energético
-    - Carboneras
+    - Consumo No Energético
     - Transporte
     - Comercial
     - Industria
