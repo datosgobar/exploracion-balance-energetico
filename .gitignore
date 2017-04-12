@@ -6,3 +6,6 @@
 
 # Python compilado
 *.pyc
+
+# Archivos generados
+output/*
