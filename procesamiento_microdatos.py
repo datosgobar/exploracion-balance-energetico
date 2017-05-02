@@ -10,8 +10,6 @@ import openpyxl as pyxl
 import os
 import sys
 
-MICRODATOS = "datos/Datos Abiertos Series V2a Original.xlsx"
-
 # A partir de la planilla de microdatos de Balance Energético, se genera un Panel de datos con los siguientes ejes:
 # * Items axis (**0**, DataFrames por año): 1960 to 2015
 # * Major_axis axis (**1**, Índice por Energía): ACEITES VEGETALES to SOLAR
@@ -34,7 +32,7 @@ def sheet_to_df(ws):
     return df, name
 
 
-def generate_panel(input_file=MICRODATOS):
+def generate_panel(input_file):
     wb = pyxl.load_workbook(input_file, data_only=True)
 
     dataframes = {}
