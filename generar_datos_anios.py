@@ -54,7 +54,7 @@ CENTROS_TRANSFORMACION_BASE = ["Plantas de Tratamiento de Gas", "Refinerías", "
 CONSUMOS = ["Consumo Propio", "Residencial", "Consumo No Energético", "Transporte", "Comercial", "Industria", "Agropecuario"]
 
 
-OFERTA = ["Producción", "Importación", "Exportación", "Otros Conceptos de Oferta", "Oferta Interna"]
+OFERTA = ["Producción", "Otros Conceptos de Oferta", "Oferta Interna"]
 NODOS_BASE = get_nodos("dict")
 NODOS_IDX_A_NOMBRE = {nodo["id"]: nodo["nombre"] for nodo in NODOS_BASE}
 NODOS_NOMBRE_A_IDX = {nodo["nombre"]: nodo["id"] for nodo in NODOS_BASE}
