@@ -49,8 +49,6 @@ AGRUPAMIENTOS_ENERGIAS_MINEM = {
     "No Energéticos": ["No Energético", "No Energético de Carbón", "Etano"]
 }
 
-NODOS_BASE = get_nodos("dict")
-
 CENTROS_TRANSFORMACION_FINALES = ["Centrales Eléctricas", "Plantas de Tratamiento de Gas", "Refinerías", "Otros Centros de Transformación"]
 CENTROS_TRANSFORMACION_BASE = ["Plantas de Tratamiento de Gas", "Refinerías", "Servicio Público", "Autoproducción", "Aceiteras y Destilerías", "Coquerías", "Carboneras", "Altos Hornos"]
 CONSUMOS = ["Consumo Propio", "Residencial", "Consumo No Energético", "Transporte", "Comercial", "Industria", "Agropecuario"]
@@ -65,9 +63,9 @@ NODOS_NOMBRE_A_IDX = {nodo["nombre"]: nodo["id"] for nodo in NODOS_BASE}
 def calcular_perdidas(data):
     for uso in data.columns.get_values():
         if uso in CENTROS_TRANSFORMACION_BASE:
-            data.loc["Pérdidas por Transformación", uso] = -sum(data[uso].dropna())
+            data.loc["Pérdidas", uso] = -sum(data[uso].dropna())
         else:
-            data.loc["Pérdidas por Transformación", uso] = 0
+            data.loc["Pérdidas", uso] = 0
     return data
 
 
@@ -155,14 +153,14 @@ def tooltip_energia(df, nombre_energia):
 def generar_tooltips_energias(df):
     tooltips = {energia: tooltip_energia(df, energia)
                 for energia in df.index
-                if energia != "Pérdidas por Transformación"}
+                if energia != "Pérdidas"}
     return tooltips
 
 
 def tooltip_centro(df, nombre_centro):
     centro = df.loc[nombre_centro]
-    perdida = round(centro["Pérdidas por Transformación"], 2)
-    centro = centro.drop("Pérdidas por Transformación")
+    perdida = round(centro["Pérdidas"], 2)
+    centro = centro.drop("Pérdidas")
     tooltip = {
         "consumo": round(sum([abs(i) for i in centro if i < 0], 2)),
         "produccion": round(sum([i for i in centro if i > 0]), 2),
@@ -232,11 +230,13 @@ def ajustar_nodos(nodos, df):
             elif "oferta_interna" in nodo:
                 nodo["posicionY"] = nodo["oferta_interna"]
 
-        if nodo["nombre"] == "Pérdidas por Transformación":
-            nodo["consumo"] = round(sum(
-                [abs(i) for i in df.loc["Pérdidas por Transformación"]]), 2)
+        if nodo["nombre"] == "Pérdidas":
+            nodo["consumo"] = round(
+                (sum([abs(i) for i in df.loc["Pérdidas"]]) +
+                 sum([abs(i) for i in df.loc[:, "Pérdidas"]])),
+                2)
 
-        if nodo["nombre"] in ["Pérdidas", "borrar"]:
+        if nodo["nombre"] == "borrar":
             nodo["oferta_interna"] = 1
 
     return nodos
