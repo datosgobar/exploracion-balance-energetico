@@ -8,4 +8,4 @@
 *.pyc
 
 # Archivos generados
-output/*
+output.tar.gz
