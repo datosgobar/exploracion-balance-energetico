@@ -453,11 +453,16 @@
             "exportacion": 0.0
         },
         {
-            "posicionY": 1,
-            "nombre": "borrar",
-            "oferta_interna": 1,
+            "posicionY": null,
+            "nombre": "Importación",
+            "id": 42,
+            "posicionX": 0
+        },
+        {
+            "posicionY": null,
+            "nombre": "Exportación",
             "id": 43,
-            "posicionX": 6
+            "posicionX": 4
         },
         {
             "posicionY": 1,
@@ -479,13 +484,6 @@
             "oferta_interna": 1,
             "id": 46,
             "posicionX": 6
-        },
-        {
-            "posicionY": 1,
-            "nombre": "borrar",
-            "oferta_interna": 1,
-            "id": 47,
-            "posicionX": 6
         }
     ],
     "links": [
@@ -498,6 +496,11 @@
             "source": 10,
             "target": 26,
             "value": 16.0
+        },
+        {
+            "source": 42,
+            "target": 6,
+            "value": 514.0
         },
         {
             "source": 6,
@@ -525,6 +528,11 @@
             "value": 458.33
         },
         {
+            "source": 21,
+            "target": 43,
+            "value": 131.55
+        },
+        {
             "source": 28,
             "target": 21,
             "value": 533.08
@@ -543,6 +551,11 @@
             "source": 21,
             "target": 29,
             "value": 139.29
+        },
+        {
+            "source": 12,
+            "target": 43,
+            "value": 0.78
         },
         {
             "source": 12,
@@ -578,6 +591,16 @@
             "source": 26,
             "target": 12,
             "value": 2031.64
+        },
+        {
+            "source": 42,
+            "target": 16,
+            "value": 145.38
+        },
+        {
+            "source": 16,
+            "target": 43,
+            "value": 20.87
         },
         {
             "source": 28,
@@ -710,6 +733,11 @@
             "value": 1035.68
         },
         {
+            "source": 14,
+            "target": 43,
+            "value": 5.32
+        },
+        {
             "source": 27,
             "target": 14,
             "value": 251.59
@@ -743,6 +771,16 @@
             "source": 14,
             "target": 35,
             "value": 30.17
+        },
+        {
+            "source": 42,
+            "target": 15,
+            "value": 213.08
+        },
+        {
+            "source": 15,
+            "target": 43,
+            "value": 152.2
         },
         {
             "source": 28,
@@ -825,6 +863,11 @@
             "value": 696.0
         },
         {
+            "source": 17,
+            "target": 43,
+            "value": 90.72
+        },
+        {
             "source": 28,
             "target": 17,
             "value": 4399.66
@@ -853,6 +896,16 @@
             "source": 11,
             "target": 26,
             "value": 24.94
+        },
+        {
+            "source": 42,
+            "target": 3,
+            "value": 2260.81
+        },
+        {
+            "source": 3,
+            "target": 43,
+            "value": 27.55
         },
         {
             "source": 3,
@@ -895,6 +948,16 @@
             "value": 233.33
         },
         {
+            "source": 42,
+            "target": 38,
+            "value": 6.36
+        },
+        {
+            "source": 43,
+            "target": 38,
+            "value": 22.62
+        },
+        {
             "source": 38,
             "target": 35,
             "value": 85.53
@@ -903,6 +966,16 @@
             "source": 29,
             "target": 38,
             "value": 56.55
+        },
+        {
+            "source": 42,
+            "target": 40,
+            "value": 152.0
+        },
+        {
+            "source": 40,
+            "target": 43,
+            "value": 18.0
         },
         {
             "source": 28,

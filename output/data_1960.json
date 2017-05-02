@@ -453,11 +453,16 @@
             "exportacion": 0.0
         },
         {
-            "posicionY": 1,
-            "nombre": "borrar",
-            "oferta_interna": 1,
+            "posicionY": null,
+            "nombre": "Importación",
+            "id": 42,
+            "posicionX": 0
+        },
+        {
+            "posicionY": null,
+            "nombre": "Exportación",
             "id": 43,
-            "posicionX": 6
+            "posicionX": 4
         },
         {
             "posicionY": 1,
@@ -479,16 +484,14 @@
             "oferta_interna": 1,
             "id": 46,
             "posicionX": 6
-        },
-        {
-            "posicionY": 1,
-            "nombre": "borrar",
-            "oferta_interna": 1,
-            "id": 47,
-            "posicionX": 6
         }
     ],
     "links": [
+        {
+            "source": 42,
+            "target": 6,
+            "value": 992.5
+        },
         {
             "source": 6,
             "target": 30,
@@ -553,6 +556,11 @@
             "source": 26,
             "target": 12,
             "value": 905.8
+        },
+        {
+            "source": 42,
+            "target": 16,
+            "value": 302.36
         },
         {
             "source": 28,
@@ -685,6 +693,11 @@
             "value": 14.99
         },
         {
+            "source": 42,
+            "target": 15,
+            "value": 779.95
+        },
+        {
             "source": 28,
             "target": 15,
             "value": 654.16
@@ -723,6 +736,11 @@
             "source": 0,
             "target": 26,
             "value": 99.7
+        },
+        {
+            "source": 42,
+            "target": 23,
+            "value": 500.39
         },
         {
             "source": 28,
@@ -780,6 +798,11 @@
             "value": 1288.97
         },
         {
+            "source": 42,
+            "target": 3,
+            "value": 3279.32
+        },
+        {
             "source": 3,
             "target": 28,
             "value": 12128.59
@@ -815,6 +838,11 @@
             "value": 259.47
         },
         {
+            "source": 42,
+            "target": 38,
+            "value": 49.27
+        },
+        {
             "source": 38,
             "target": 35,
             "value": 54.84
@@ -823,6 +851,11 @@
             "source": 29,
             "target": 38,
             "value": 5.56
+        },
+        {
+            "source": 42,
+            "target": 40,
+            "value": 55.3
         },
         {
             "source": 28,

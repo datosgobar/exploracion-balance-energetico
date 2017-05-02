@@ -453,11 +453,16 @@
             "exportacion": 0.0
         },
         {
-            "posicionY": 1,
-            "nombre": "borrar",
-            "oferta_interna": 1,
+            "posicionY": null,
+            "nombre": "Importación",
+            "id": 42,
+            "posicionX": 0
+        },
+        {
+            "posicionY": null,
+            "nombre": "Exportación",
             "id": 43,
-            "posicionX": 6
+            "posicionX": 4
         },
         {
             "posicionY": 1,
@@ -479,13 +484,6 @@
             "oferta_interna": 1,
             "id": 46,
             "posicionX": 6
-        },
-        {
-            "posicionY": 1,
-            "nombre": "borrar",
-            "oferta_interna": 1,
-            "id": 47,
-            "posicionX": 6
         }
     ],
     "links": [
@@ -498,6 +496,11 @@
             "source": 10,
             "target": 26,
             "value": 17.0
+        },
+        {
+            "source": 42,
+            "target": 6,
+            "value": 792.0
         },
         {
             "source": 6,
@@ -525,6 +528,11 @@
             "value": 663.54
         },
         {
+            "source": 21,
+            "target": 43,
+            "value": 200.27
+        },
+        {
             "source": 28,
             "target": 21,
             "value": 556.64
@@ -543,6 +551,16 @@
             "source": 21,
             "target": 29,
             "value": 152.8
+        },
+        {
+            "source": 42,
+            "target": 12,
+            "value": 6.98
+        },
+        {
+            "source": 12,
+            "target": 43,
+            "value": 0.17
         },
         {
             "source": 12,
@@ -583,6 +601,11 @@
             "source": 26,
             "target": 12,
             "value": 2787.55
+        },
+        {
+            "source": 16,
+            "target": 43,
+            "value": 184.34
         },
         {
             "source": 28,
@@ -650,6 +673,11 @@
             "value": 153.67
         },
         {
+            "source": 42,
+            "target": 2,
+            "value": 1888.0
+        },
+        {
             "source": 2,
             "target": 37,
             "value": 2708.44
@@ -715,6 +743,11 @@
             "value": 1846.73
         },
         {
+            "source": 14,
+            "target": 43,
+            "value": 11.22
+        },
+        {
             "source": 27,
             "target": 14,
             "value": 208.02
@@ -748,6 +781,16 @@
             "source": 14,
             "target": 35,
             "value": 68.68
+        },
+        {
+            "source": 42,
+            "target": 15,
+            "value": 513.12
+        },
+        {
+            "source": 15,
+            "target": 43,
+            "value": 106.1
         },
         {
             "source": 28,
@@ -830,6 +873,11 @@
             "value": 429.21
         },
         {
+            "source": 42,
+            "target": 17,
+            "value": 12.98
+        },
+        {
             "source": 28,
             "target": 17,
             "value": 4073.91
@@ -863,6 +911,11 @@
             "source": 11,
             "target": 26,
             "value": 25.93
+        },
+        {
+            "source": 42,
+            "target": 3,
+            "value": 3037.94
         },
         {
             "source": 3,
@@ -905,6 +958,16 @@
             "value": 134.4
         },
         {
+            "source": 42,
+            "target": 38,
+            "value": 24.03
+        },
+        {
+            "source": 43,
+            "target": 38,
+            "value": 45.94
+        },
+        {
             "source": 38,
             "target": 35,
             "value": 66.44
@@ -913,6 +976,16 @@
             "source": 29,
             "target": 38,
             "value": 72.1
+        },
+        {
+            "source": 42,
+            "target": 40,
+            "value": 21.0
+        },
+        {
+            "source": 40,
+            "target": 43,
+            "value": 10.0
         },
         {
             "source": 28,

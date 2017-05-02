@@ -453,11 +453,16 @@
             "exportacion": 0.0
         },
         {
-            "posicionY": 1,
-            "nombre": "borrar",
-            "oferta_interna": 1,
+            "posicionY": null,
+            "nombre": "Importación",
+            "id": 42,
+            "posicionX": 0
+        },
+        {
+            "posicionY": null,
+            "nombre": "Exportación",
             "id": 43,
-            "posicionX": 6
+            "posicionX": 4
         },
         {
             "posicionY": 1,
@@ -479,13 +484,6 @@
             "oferta_interna": 1,
             "id": 46,
             "posicionX": 6
-        },
-        {
-            "posicionY": 1,
-            "nombre": "borrar",
-            "oferta_interna": 1,
-            "id": 47,
-            "posicionX": 6
         }
     ],
     "links": [
@@ -498,6 +496,11 @@
             "source": 10,
             "target": 26,
             "value": 28.0
+        },
+        {
+            "source": 42,
+            "target": 6,
+            "value": 550.0
         },
         {
             "source": 6,
@@ -520,6 +523,11 @@
             "value": 602.08
         },
         {
+            "source": 21,
+            "target": 43,
+            "value": 199.29
+        },
+        {
             "source": 28,
             "target": 21,
             "value": 738.26
@@ -538,6 +546,11 @@
             "source": 21,
             "target": 29,
             "value": 435.54
+        },
+        {
+            "source": 12,
+            "target": 43,
+            "value": 0.48
         },
         {
             "source": 12,
@@ -578,6 +591,11 @@
             "source": 26,
             "target": 12,
             "value": 3896.12
+        },
+        {
+            "source": 16,
+            "target": 43,
+            "value": 2057.72
         },
         {
             "source": 28,
@@ -643,6 +661,11 @@
             "source": 29,
             "target": 25,
             "value": 163.99
+        },
+        {
+            "source": 42,
+            "target": 2,
+            "value": 1835.16
         },
         {
             "source": 2,
@@ -715,6 +738,11 @@
             "value": 3152.4
         },
         {
+            "source": 14,
+            "target": 43,
+            "value": 18.9
+        },
+        {
             "source": 27,
             "target": 14,
             "value": 852.13
@@ -748,6 +776,11 @@
             "source": 14,
             "target": 35,
             "value": 84.79
+        },
+        {
+            "source": 15,
+            "target": 43,
+            "value": 944.49
         },
         {
             "source": 28,
@@ -805,6 +838,16 @@
             "value": 2220.21
         },
         {
+            "source": 42,
+            "target": 23,
+            "value": 52.57
+        },
+        {
+            "source": 23,
+            "target": 43,
+            "value": 29.46
+        },
+        {
             "source": 28,
             "target": 23,
             "value": 1149.93
@@ -833,6 +876,11 @@
             "source": 9,
             "target": 29,
             "value": 318.86
+        },
+        {
+            "source": 17,
+            "target": 43,
+            "value": 385.04
         },
         {
             "source": 28,
@@ -868,6 +916,11 @@
             "source": 11,
             "target": 26,
             "value": 28.93
+        },
+        {
+            "source": 3,
+            "target": 43,
+            "value": 464.97
         },
         {
             "source": 3,
@@ -910,6 +963,11 @@
             "value": 56.0
         },
         {
+            "source": 43,
+            "target": 38,
+            "value": 103.2
+        },
+        {
             "source": 38,
             "target": 35,
             "value": 44.53
@@ -918,6 +976,16 @@
             "source": 38,
             "target": 29,
             "value": 82.7
+        },
+        {
+            "source": 42,
+            "target": 40,
+            "value": 36.0
+        },
+        {
+            "source": 40,
+            "target": 43,
+            "value": 151.0
         },
         {
             "source": 27,
