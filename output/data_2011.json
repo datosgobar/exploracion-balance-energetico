@@ -349,7 +349,7 @@
             "consumo": 4209.0
         },
         {
-            "posicionY": 0,
+            "posicionY": 2,
             "nombre": "Consumo Propio",
             "consumo": 7422.27,
             "id": 30,
@@ -398,9 +398,9 @@
             "posicionX": 6
         },
         {
-            "posicionY": 1,
-            "nombre": "Pérdidas por Transformación",
-            "consumo": 14791.58,
+            "posicionY": 0,
+            "nombre": "Pérdidas",
+            "consumo": 18515.41,
             "id": 37,
             "posicionX": 6
         },
@@ -454,41 +454,34 @@
         },
         {
             "posicionY": 1,
-            "nombre": "Pérdidas",
-            "oferta_interna": 1,
-            "id": 42,
-            "posicionX": 8
-        },
-        {
-            "posicionY": 2,
             "nombre": "borrar",
             "oferta_interna": 1,
             "id": 43,
             "posicionX": 6
         },
         {
-            "posicionY": 2,
+            "posicionY": 1,
             "nombre": "borrar",
             "oferta_interna": 1,
             "id": 44,
             "posicionX": 6
         },
         {
-            "posicionY": 2,
+            "posicionY": 1,
             "nombre": "borrar",
             "oferta_interna": 1,
             "id": 45,
             "posicionX": 6
         },
         {
-            "posicionY": 2,
+            "posicionY": 1,
             "nombre": "borrar",
             "oferta_interna": 1,
             "id": 46,
             "posicionX": 6
         },
         {
-            "posicionY": 2,
+            "posicionY": 1,
             "nombre": "borrar",
             "oferta_interna": 1,
             "id": 47,
@@ -558,7 +551,7 @@
         },
         {
             "source": 12,
-            "target": 42,
+            "target": 37,
             "value": 1630.05
         },
         {
@@ -673,7 +666,7 @@
         },
         {
             "source": 2,
-            "target": 42,
+            "target": 37,
             "value": 741.49
         },
         {
@@ -703,7 +696,7 @@
         },
         {
             "source": 13,
-            "target": 42,
+            "target": 37,
             "value": 1318.0
         },
         {
@@ -823,7 +816,7 @@
         },
         {
             "source": 0,
-            "target": 42,
+            "target": 37,
             "value": 34.29
         },
         {
