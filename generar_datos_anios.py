@@ -246,6 +246,17 @@ def ajustar_nodos(nodos, df):
     return nodos
 
 
+def ajustar_links(links):
+    link_escala = {
+        "source": "escala1",
+        "target": "escala2",
+        "value": 175000
+    }
+
+    links.append(link_escala)
+
+    return links
+
 def generar_datos_anio(panel, yr):
     df = get_yr(panel, yr)
 
@@ -256,6 +267,9 @@ def generar_datos_anio(panel, yr):
     nodos = ajustar_nodos(nodos, df)
 
     links = generar_links(df)
+
+    links = ajustar_links(links)
+
     links_con_id = convertir_nombres_lista_links_a_ids(links)
 
     datos = {"nodes": nodos, "links": links_con_id}
