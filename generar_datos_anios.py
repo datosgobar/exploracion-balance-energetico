@@ -109,8 +109,8 @@ def get_yr(panel, yr):
 
 def corregir_signo_consumo(df):
     # Corrijo signo de rubros de consumo para que "reciban" de las distintas formas de energía
-    for consumo in ["No Energético", "Residencial", "Comercial", "Transporte", "Agropecuario", "Industria"]:
-        df[consumo] = -df[consumo]
+    for consumo in CONSUMOS:
+        df[consumo] = -abs(df[consumo])
     return df
 
 

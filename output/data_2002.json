@@ -255,7 +255,7 @@
         {
             "posicionY": 2,
             "nombre": "Consumo Propio",
-            "consumo": 5761.49,
+            "consumo": 5793.92,
             "id": 30,
             "posicionX": 6
         },
@@ -817,7 +817,7 @@
         {
             "source": 45,
             "target": 30,
-            "value": 1197.13
+            "value": 1229.56
         },
         {
             "source": 45,
