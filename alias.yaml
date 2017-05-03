@@ -6,7 +6,7 @@ ALCOHOL VEGETAL: Alcohol Vegetal
 BAGAZO: Bagazo
 CARBON MINERAL: Carbón Mineral
 EOLICA: Energía Eólica
-GAS DE POZO: Gas Natural de Pozo
+GAS DE POZO: Gas Natural
 LEÑA: Leña
 NUCLEAR: Energía Nuclear
 OTROS PRIMARIOS: Otros Primarios
@@ -27,7 +27,7 @@ FUELOIL: Fuel Oil
 GAS ALTO HORNO: Gas de Alto Horno
 GAS COQUERIA: Gas de Coquería
 GAS DE REFINERIA: Gas de Refinería
-GAS DISTRIBUIDO: Gas Distribuido por Redes
+GAS DISTRIBUIDO: Gas de Red
 GAS LICUADO: Gas Licuado
 GASOIL: Gas Oil
 GASOLINA ESTABILIZADA PETROLEO y GAS: Gasolina
@@ -52,7 +52,7 @@ AJUSTE: Ajustes
 ## Centros de Transformación
 CENT: Servicio Público
 AUTO: Autoproducción
-P.TRA.: Plantas de Tratamiento de Gas
+P.TRA.: Plantas de Gas
 REFI: Refinerías
 ACEI: Aceiteras y Destilerías
 COQ: Coquerías
@@ -61,7 +61,7 @@ A.HOR: Altos Hornos
 
 ## Consumo
 C.PROP: Consumo Propio
-NO ENER: Consumo No Energético
+NO ENER: No Energético
 RESID: Residencial
 COMER: Comercial
 TRANS: Transporte

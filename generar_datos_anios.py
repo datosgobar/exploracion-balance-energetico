@@ -38,7 +38,7 @@ with open("alias.yaml") as alias_file:
 AGRUPACION_USOS_PROPIA = {
     "Otros Conceptos de Oferta": ['Variación de Stock', 'Búnker', 'No Aprovechado', 'Ajustes'],
     "Centrales Eléctricas": ['Servicio Público', 'Autoproducción'],
-    "Otros Centros de Transformación": ['Aceiteras y Destilerías', 'Coquerías', 'Carboneras', 'Altos Hornos']
+    "Otros Centros": ['Aceiteras y Destilerías', 'Coquerías', 'Carboneras', 'Altos Hornos']
 }
 
 AGRUPACION_OFERTA_INTERNA = ["Producción", "Importación", "Exportación", "Pérdidas", 'Variación de Stock', 'Búnker', 'No Aprovechado', 'Ajustes']
@@ -53,9 +53,9 @@ AGRUPAMIENTOS_ENERGIAS_MINEM = {
         "Coque de Carbón", "Coque de Petróleo", "Carbón Vegetal"]
 }
 
-CENTROS_TRANSFORMACION_FINALES = ["Centrales Eléctricas", "Plantas de Tratamiento de Gas", "Refinerías", "Otros Centros de Transformación"]
-CENTROS_TRANSFORMACION_BASE = ["Plantas de Tratamiento de Gas", "Refinerías", "Servicio Público", "Autoproducción", "Aceiteras y Destilerías", "Coquerías", "Carboneras", "Altos Hornos"]
-CONSUMOS = ["Consumo Propio", "Residencial", "Consumo No Energético", "Transporte", "Comercial", "Industria", "Agropecuario"]
+CENTROS_TRANSFORMACION_FINALES = ["Centrales Eléctricas", "Plantas de Gas", "Refinerías", "Otros Centros"]
+CENTROS_TRANSFORMACION_BASE = ["Plantas de Gas", "Refinerías", "Servicio Público", "Autoproducción", "Aceiteras y Destilerías", "Coquerías", "Carboneras", "Altos Hornos"]
+CONSUMOS = ["Consumo Propio", "Residencial", "No Energético", "Transporte", "Comercial", "Industria", "Agropecuario"]
 
 
 OFERTA = ["Producción", "Otros Conceptos de Oferta", "Oferta Interna"]
@@ -109,7 +109,7 @@ def get_yr(panel, yr):
 
 def corregir_signo_consumo(df):
     # Corrijo signo de rubros de consumo para que "reciban" de las distintas formas de energía
-    for consumo in ["Consumo No Energético", "Residencial", "Comercial", "Transporte", "Agropecuario", "Industria"]:
+    for consumo in ["No Energético", "Residencial", "Comercial", "Transporte", "Agropecuario", "Industria"]:
         df[consumo] = -df[consumo]
     return df
 
