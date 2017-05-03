@@ -30,7 +30,7 @@
             "importacion": 1759.85,
             "produccion": 16526.69,
             "oferta_interna": 15359.54,
-            "nombre": "Gas Natural de Pozo",
+            "nombre": "Gas Natural",
             "otros": -854.93,
             "perdidas": -2072.06,
             "id": 2,
@@ -162,7 +162,7 @@
             "importacion": 0.0,
             "produccion": 12914.13,
             "oferta_interna": 12309.51,
-            "nombre": "Gas Distribuido por Redes",
+            "nombre": "Gas de Red",
             "otros": 0.0,
             "perdidas": -604.63,
             "id": 13,
@@ -229,7 +229,7 @@
             "posicionY": 14411.0,
             "posicionX": 2,
             "produccion": 14408.76,
-            "nombre": "Plantas de Tratamiento de Gas",
+            "nombre": "Plantas de Gas",
             "perdida": 0.0,
             "id": 27,
             "consumo": 14411.0
@@ -247,7 +247,7 @@
             "posicionY": 1084.0,
             "posicionX": 2,
             "produccion": 615.15,
-            "nombre": "Otros Centros de Transformación",
+            "nombre": "Otros Centros",
             "perdida": 466.53,
             "id": 29,
             "consumo": 1084.0
@@ -268,7 +268,7 @@
         },
         {
             "posicionY": 2441.52,
-            "nombre": "Consumo No Energético",
+            "nombre": "No Energético",
             "consumo": 2441.52,
             "id": 32,
             "posicionX": 6
