@@ -44,9 +44,13 @@ AGRUPACION_USOS_PROPIA = {
 AGRUPACION_OFERTA_INTERNA = ["Producción", "Importación", "Exportación", "Pérdidas", 'Variación de Stock', 'Búnker', 'No Aprovechado', 'Ajustes']
 
 AGRUPAMIENTOS_ENERGIAS_MINEM = {
-    "Coque": ["Coque de Carbón", "Coque de Petróleo"],
-    "Carbón de Leña": ["Carbón Vegetal"],
-    "No Energéticos": ["No Energético", "No Energético de Carbón", "Etano"]
+    "Biocombustibles": ["Biodiesel", "Bioetanol"],
+    "Otros Gases": [
+        "Gas de Refinería", "Gas de Alto Horno", "Gas de Coquería"],
+    "Otras Secundarias": [
+        "Gasolina", "Otras Naftas", "Kerosene", "Carbón Residual",
+        "No Energético", "No Energético de Carbón", "Etano",
+        "Coque de Carbón", "Coque de Petróleo", "Carbón Vegetal"]
 }
 
 CENTROS_TRANSFORMACION_FINALES = ["Centrales Eléctricas", "Plantas de Tratamiento de Gas", "Refinerías", "Otros Centros de Transformación"]
