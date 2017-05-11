@@ -166,7 +166,7 @@ def tooltip_centro(df, nombre_centro):
     perdida = round(centro["Pérdidas"], 2)
     centro = centro.drop("Pérdidas")
     tooltip = {
-        "consumo": round(sum([abs(i) for i in centro if i < 0], 2)),
+        "consumo": round(sum([abs(i) for i in centro if i < 0]), 2),
         "produccion": round(sum([i for i in centro if i > 0]), 2),
         "perdida": perdida
     }
