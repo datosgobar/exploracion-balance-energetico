@@ -1,4 +1,13 @@
-PYTHON=/home/gonzalo/anaconda2/envs/energia/bin/python
+PYTHON=venv/bin/python
+
+# Las dos recetas siguientes fueron tomadas de
+# http://blog.bottlepy.org/2012/07/16/virtualenv-and-makefiles.html
+venv: venv/bin/activate
+
+venv/bin/activate: requirements.txt
+	test -d venv || virtualenv venv
+	venv/bin/pip install -r requirements.txt
+	touch venv/bin/activate
 
 .PHONY: all
 
