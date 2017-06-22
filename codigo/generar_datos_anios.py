@@ -49,7 +49,7 @@ OFERTA = ["Producción", "Otros Conceptos de Oferta", "Oferta Interna"]
 
 
 def get_nodos(formato="dict"):
-    wb = pyxl.load_workbook("maestro-nodos.xlsx")
+    wb = pyxl.load_workbook("input/maestro-nodos.xlsx")
     ws = wb.active
     raw_data = ws.values
 
@@ -291,7 +291,7 @@ def generar_datos_anio(panel, yr):
 def escribir_datos(panel):
     for yr in panel.items:
         datos = generar_datos_anio(panel, yr)
-        write_json(datos, "output/data_{}.json".format(yr))
+        write_json(datos, "datos-sankey/data_{}.json".format(yr))
 
 
 if __name__ == "__main__":
