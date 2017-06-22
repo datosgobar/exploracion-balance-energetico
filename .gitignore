@@ -7,5 +7,5 @@
 # Python compilado
 *.pyc
 
-# Archivos generados
-output.tar.gz
+# Python del proyecto
+venv/*
