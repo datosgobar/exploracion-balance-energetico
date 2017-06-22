@@ -1,8 +1,5 @@
-
-# coding: utf-8
-
-# In[ ]:
-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from __future__ import print_function
 from __future__ import unicode_literals
 import yaml
@@ -12,6 +9,43 @@ import sys
 import pickle
 import pandas as pd
 import openpyxl as pyxl
+
+
+with open("input/alias.yaml") as alias_file:
+    ALIAS = yaml.load(alias_file)
+
+AGRUPACION_USOS_PROPIA = {
+    "Otros Conceptos de Oferta": [
+        'Variación de Stock', 'Búnker', 'No Aprovechado', 'Ajustes'],
+    "Centrales Eléctricas": ['Servicio Público', 'Autoproducción'],
+    "Otros Centros": [
+        'Aceiteras y Destilerías', 'Coquerías', 'Carboneras', 'Altos Hornos']
+}
+AGRUPACION_OFERTA_INTERNA = [
+    'Producción', 'Importación', 'Exportación', 'Pérdidas',
+    'Variación de Stock', 'Búnker', 'No Aprovechado', 'Ajustes'
+]
+AGRUPAMIENTOS_ENERGIAS_MINEM = {
+    "Biocombustibles": ["Biodiesel", "Bioetanol"],
+    "Otros Gases": [
+        "Gas de Refinería", "Gas de Alto Horno", "Gas de Coquería"],
+    "Otras Secundarias": [
+        "Gasolina", "Otras Naftas", "Kerosene", "Carbón Residual",
+        "No Energético", "No Energético de Carbón", "Etano",
+        "Coque de Carbón", "Coque de Petróleo", "Carbón Vegetal"]
+}
+CENTROS_TRANSFORMACION_FINALES = [
+    "Centrales Eléctricas", "Plantas de Gas", "Refinerías", "Otros Centros"
+]
+CENTROS_TRANSFORMACION_BASE = [
+    "Plantas de Gas", "Refinerías", "Servicio Público", "Autoproducción",
+    "Aceiteras y Destilerías", "Coquerías", "Carboneras", "Altos Hornos"
+]
+CONSUMOS = [
+    "Consumo Propio", "Residencial", "No Energético", "Transporte",
+    "Comercial", "Industria", "Agropecuario"
+]
+OFERTA = ["Producción", "Otros Conceptos de Oferta", "Oferta Interna"]
 
 
 def get_nodos(formato="dict"):
@@ -28,37 +62,6 @@ def get_nodos(formato="dict"):
     else:
         print("Formato no reconodico: {}".format(formato))
 
-
-with open("grupos.yaml") as groups_file:
-    GRUPOS = yaml.load(groups_file)
-
-with open("alias.yaml") as alias_file:
-    ALIAS = yaml.load(alias_file)
-
-AGRUPACION_USOS_PROPIA = {
-    "Otros Conceptos de Oferta": ['Variación de Stock', 'Búnker', 'No Aprovechado', 'Ajustes'],
-    "Centrales Eléctricas": ['Servicio Público', 'Autoproducción'],
-    "Otros Centros": ['Aceiteras y Destilerías', 'Coquerías', 'Carboneras', 'Altos Hornos']
-}
-
-AGRUPACION_OFERTA_INTERNA = ["Producción", "Importación", "Exportación", "Pérdidas", 'Variación de Stock', 'Búnker', 'No Aprovechado', 'Ajustes']
-
-AGRUPAMIENTOS_ENERGIAS_MINEM = {
-    "Biocombustibles": ["Biodiesel", "Bioetanol"],
-    "Otros Gases": [
-        "Gas de Refinería", "Gas de Alto Horno", "Gas de Coquería"],
-    "Otras Secundarias": [
-        "Gasolina", "Otras Naftas", "Kerosene", "Carbón Residual",
-        "No Energético", "No Energético de Carbón", "Etano",
-        "Coque de Carbón", "Coque de Petróleo", "Carbón Vegetal"]
-}
-
-CENTROS_TRANSFORMACION_FINALES = ["Centrales Eléctricas", "Plantas de Gas", "Refinerías", "Otros Centros"]
-CENTROS_TRANSFORMACION_BASE = ["Plantas de Gas", "Refinerías", "Servicio Público", "Autoproducción", "Aceiteras y Destilerías", "Coquerías", "Carboneras", "Altos Hornos"]
-CONSUMOS = ["Consumo Propio", "Residencial", "No Energético", "Transporte", "Comercial", "Industria", "Agropecuario"]
-
-
-OFERTA = ["Producción", "Otros Conceptos de Oferta", "Oferta Interna"]
 NODOS_BASE = get_nodos("dict")
 NODOS_IDX_A_NOMBRE = {nodo["id"]: nodo["nombre"] for nodo in NODOS_BASE}
 NODOS_NOMBRE_A_IDX = {nodo["nombre"]: nodo["id"] for nodo in NODOS_BASE}
@@ -74,8 +77,9 @@ def calcular_perdidas(data):
 
 
 def sumar_filas_df(df, nueva_fila, filas, borrar=True):
-    """Suma todas las filas con índices en la lista `filas`,
-    en una nueva fila con índice `nueva_fila`. Si `borrar`, no las incluye en el df retornado. Devuelve el df"""
+    """Suma todas las filas con índices en la lista `filas`, en una nueva fila
+    con índice `nueva_fila`. Si `borrar`, no las incluye en el df retornado.
+    Devuelve el df"""
     df.loc[nueva_fila] = reduce(pd.Series.add, [df.loc[f] for f in filas])
     if borrar:
         df = df.drop(filas, axis=0)
@@ -84,21 +88,25 @@ def sumar_filas_df(df, nueva_fila, filas, borrar=True):
 
 def adaptar_df_a_entidades_minem(df):
     for energia in AGRUPAMIENTOS_ENERGIAS_MINEM:
-        df = sumar_filas_df(df, nueva_fila=energia, filas=AGRUPAMIENTOS_ENERGIAS_MINEM[energia])
+        df = sumar_filas_df(df, nueva_fila=energia,
+                            filas=AGRUPAMIENTOS_ENERGIAS_MINEM[energia])
     return df
 
 
 def simplificar_usos(df):
     df_usos = df.transpose()
-    df_usos = sumar_filas_df(df_usos, nueva_fila="Oferta Interna", filas=AGRUPACION_OFERTA_INTERNA, borrar=False)
+    df_usos = sumar_filas_df(df_usos, nueva_fila="Oferta Interna",
+                             filas=AGRUPACION_OFERTA_INTERNA, borrar=False)
     for uso in AGRUPACION_USOS_PROPIA:
-        df_usos = sumar_filas_df(df_usos, nueva_fila=uso, filas=AGRUPACION_USOS_PROPIA[uso])
+        df_usos = sumar_filas_df(df_usos, nueva_fila=uso,
+                                 filas=AGRUPACION_USOS_PROPIA[uso])
     df = df_usos.transpose()
     return df
 
 
 def get_yr(panel, yr):
-    """Devuelve la data correspondiente a un año del panel de microdatos con los nombres de energías y usos completos."""
+    """Devuelve la data correspondiente a un año del panel de microdatos con
+    los nombres de energías y usos completos."""
     df = panel[yr].rename(columns=ALIAS, index=ALIAS)
     df = corregir_signo_consumo(df)
     df = calcular_perdidas(df)
@@ -108,7 +116,8 @@ def get_yr(panel, yr):
 
 
 def corregir_signo_consumo(df):
-    # Corrijo signo de rubros de consumo para que "reciban" de las distintas formas de energía
+    """Corrije signo de rubros de consumo para que "reciban" de las distintas
+    formas de energía."""
     for consumo in CONSUMOS:
         df[consumo] = -abs(df[consumo])
     return df
@@ -122,9 +131,13 @@ def generar_links(df):
         for uso in df.columns:
             value = df.loc[unicode(energia), uso]
             if round(value, 2) < -0.01:
-                links.append({"source": energia, "target": uso, "value": round(abs(value), 2)})
+                links.append({"source": energia,
+                              "target": uso,
+                              "value": round(abs(value), 2)})
             elif round(value, 2) > 0.01:
-                links.append({"source": uso, "target": energia, "value": round(abs(value), 2)})
+                links.append({"source": uso,
+                              "target": energia,
+                              "value": round(abs(value), 2)})
 
     return links
 
@@ -257,19 +270,17 @@ def ajustar_links(links):
 
     return links
 
+
 def generar_datos_anio(panel, yr):
     df = get_yr(panel, yr)
 
     tooltips = generar_tooltips(df)
 
     nodos = componer_nodos(NODOS_BASE, tooltips)
-
     nodos = ajustar_nodos(nodos, df)
 
     links = generar_links(df)
-
     links = ajustar_links(links)
-
     links_con_id = convertir_nombres_lista_links_a_ids(links)
 
     datos = {"nodes": nodos, "links": links_con_id}
